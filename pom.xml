@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.example</groupId>
+    <artifactId>bigdata-excel-analysis-project</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+
+    <properties>
+
+        <java.version>1.8</java.version>
+        <encoding>UTF-8</encoding>
+        <fastjson.version>1.2.34</fastjson.version>
+        <poi.version>3.14</poi.version>
+        <poi.ooxml.version>3.15-beta2</poi.ooxml.version>
+        <slf4j.version>1.7.25</slf4j.version>
+        <log4j.version>2.7</log4j.version>
+        <slf4j-log4j12.version>1.7.25</slf4j-log4j12.version>
+
+    </properties>
+
+
+    <dependencies>
+
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>${poi.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>${poi.ooxml.version}</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>${fastjson.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>${log4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>${slf4j-log4j12.version}</version>
+        </dependency>
+
+
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.6.1</version>
+                <configuration>
+                    <encoding>${encoding}</encoding>
+                    <source>${java.version}</source>  <!-- 源代码使用jdk1.8支持的特性 -->
+                    <target>${java.version}</target>  <!-- 使用jvm1.8编译目标代码 -->
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
