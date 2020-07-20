@@ -54,8 +54,8 @@ public class ExcelAnalysisApplication {
         String outfilepath = args[1];
         // 处理Excel数据
         excelToJson(filepath, outfilepath);
-        System.out.println("程序运行完成");
-        logger.info("程序运行完成");
+        System.out.println("程序运行结束");
+        logger.info("程序运行结束");
 
     }
 
